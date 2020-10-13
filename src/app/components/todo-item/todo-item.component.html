@@ -1,0 +1,15 @@
+<div [ngClass]="setClasses()">
+    <div class="item-content">
+        <div>
+            <input (change)="onToggle(value)" id="{{ value.id }}" [checked]="value.completed" type="checkbox" />
+            <label for="{{ value.id }}" class="title">{{value.title}}</label>
+        </div>
+        <button (click)="onDelete(value)" class="delete">
+            <svg viewBox="0 0 10 10" class="cross">
+                <line x1=0 y1=0 x2=10 y1=10 class="cross-line" />
+                <line x1=10 y1=0 x2=0 y1=10 class="cross-line" />
+                x
+            </svg>
+        </button>
+    </div>
+</div>
